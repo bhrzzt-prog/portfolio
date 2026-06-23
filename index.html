@@ -6,347 +6,102 @@
 <title>Behrooz Tajik — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,300;0,400;0,600;1,300;1,400&family=Jost:wght=200;300;400&family=DM+Mono:wght=300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght=200;300;400&family=DM+Mono:wght=300&display=swap" rel="stylesheet">
 <style>
-:root {
-  --bg: #f9f7f4; --bg2: #f2efe9; --ink: #1a1814; --ink2: #3d3a35;
-  --dim: #9a9488; --line: #e2ddd6; --red: #b5392a; --red-dim: rgba(181,57,42,0.12);
-}
+:root { --bg: #f9f7f4; --bg2: #f2efe9; --ink: #1a1814; --ink2: #3d3a35; --dim: #9a9488; --line: #e2ddd6; --red: #b5392a; --red-dim: rgba(181,57,42,0.12); }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body { background: var(--bg); color: var(--ink); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; cursor: none; }
-
-/* Cursor Elements */
 .cur { width:6px; height:6px; background:var(--red); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transform:translate(-50%,-50%); transition:transform .08s; }
 .curR { width:28px; height:28px; border:1px solid var(--red); border-radius:50%; position:fixed; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition:transform .35s cubic-bezier(.25,.46,.45,.94); opacity:.5; }
-
-/* Navigation */
 nav { position: fixed; top:0; left:0; right:0; z-index:100; display: flex; align-items:center; justify-content:space-between; padding: 28px 64px; background: transparent; transition: background .4s, padding .4s; }
 nav.scrolled { background: rgba(249,247,244,.95); backdrop-filter:blur(12px); padding:18px 64px; border-bottom:1px solid var(--line); }
-.nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; color:var(--ink); text-decoration:none; letter-spacing:.02em; }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; color:var(--ink); text-decoration:none; }
 .nav-links { display:flex; gap:40px; list-style:none; }
 .nav-links a { font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--dim); text-decoration:none; transition:color .2s; }
-.nav-links a:hover { color:var(--ink); }
-
-/* Hero Section Base */
-#hero { min-height: 100vh; display: flex; flex-direction:row; align-items: center; justify-content:space-between; padding: 120px 64px 40px; position: relative; border-bottom: 1px solid var(--line); background: var(--bg); }
-.hero-bg-text { position:absolute; top:45%; left:64px; transform:translateY(-50%); font-family:'Cormorant Garamond',serif; font-size: clamp(100px, 18vw, 240px); font-weight:300; font-style:italic; color: rgba(26,24,20,.04); pointer-events:none; user-select:none; white-space:nowrap; line-height:1; z-index: 1; }
-
-/* Left Content */
-.hero-content { position:relative; z-index:2; display: flex; flex-direction: column; justify-content: flex-end; gap: 40px; width: 55%; min-height: 60vh; }
-.hero-name { font-family:'Cormorant Garamond',serif; font-size: clamp(56px, 9vw, 128px); font-weight:300; line-height:.95; letter-spacing:-.01em; opacity:0; animation: fadeUp .9s .1s forwards; }
+#hero { min-height: 100vh; display: flex; flex-direction:row; align-items: center; justify-content:space-between; padding: 120px 64px 40px; border-bottom: 1px solid var(--line); }
+.hero-content { z-index:2; display: flex; flex-direction: column; gap: 40px; width: 55%; }
+.hero-name { font-family:'Cormorant Garamond',serif; font-size: clamp(56px, 9vw, 128px); font-weight:300; line-height:.95; letter-spacing:-.01em; }
 .hero-name em { font-style:italic; color:var(--red); }
-.hero-line { display:flex; align-items:center; justify-content:space-between; padding-top: 32px; border-top: 1px solid var(--line); opacity:0; animation: fadeUp .9s .6s forwards; }
+.hero-line { display:flex; align-items:center; justify-content:space-between; padding-top: 32px; border-top: 1px solid var(--line); }
 .hero-desc { font-size:14px; color:var(--dim); max-width:420px; line-height:1.8; }
-.hero-scroll { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.2em; color:var(--dim); text-transform:uppercase; display:flex; align-items:center; gap:12px; }
-.scroll-arrow { width:32px; height:1px; background:var(--dim); position:relative; }
-.scroll-arrow::after { content:''; position:absolute; right:0; top:-3px; width:7px; height:7px; border-right:1px solid var(--dim); border-bottom:1px solid var(--dim); transform:rotate(-45deg); }
-
-/* Right Column - Centered Flow */
-.portrait-strip { 
-  width: 35%; 
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  z-index: 3; 
-  position: relative;
-}
-.portrait-inner { 
-  width: 100%; 
-  max-height: 65vh;
-  display: flex;
-  justify-content: center;
-}
-.portrait-inner img { 
-  width: 100%;
-  height: auto;
-  max-height: 65vh;
-  object-fit: contain; 
-}
-
-/* Meta Text - Perfectly Centered Under the Image */
-.hero-meta { 
-  margin-top: 24px;
-  text-align: center; 
-  opacity: 0; 
-  animation: fadeUp .9s .4s forwards; 
-  width: 100%;
-}
-.hero-role { 
-  font-size:11px; 
-  letter-spacing:.2em; 
-  text-transform:uppercase; 
-  color: var(--ink2); 
-  margin-bottom: 8px; 
-  line-height: 1.5; 
-  font-weight: 400;
-}
-.hero-avail { 
-  display:inline-flex; 
-  align-items:center; 
-  gap:8px; 
-  font-size:10px; 
-  letter-spacing:.15em; 
-  text-transform:uppercase; 
-  color: var(--red); 
-  font-weight: 400;
-}
-.avail-dot { width:6px; height:6px; border-radius:50%; background:#5a9e5a; flex-shrink:0; animation:blink 2s infinite; }
-@keyframes blink { 0%, 100% { opacity: .4; } 50% { opacity: 1; } }
-@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-
-/* Portfolio Section */
-.section { padding: 96px 64px; border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
+.portrait-strip { width: 35%; display: flex; flex-direction: column; align-items: center; }
+.portrait-inner img { width: 100%; max-height: 65vh; object-fit: contain; }
+.hero-meta { margin-top: 24px; text-align: center; }
+.hero-role { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color: var(--ink2); margin-bottom: 8px; }
+.section { padding: 96px 64px; border-bottom: 1px solid var(--line); }
 .section-alt { background: var(--bg2); }
 .eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--red); margin-bottom:48px; display:flex; align-items:center; gap:16px; }
 .eyebrow::after { content:''; flex:1; max-width:48px; height:1px; background:var(--red); opacity:.4; }
-.port-filter { display:flex; gap:4px; margin-bottom:40px; flex-wrap:wrap; }
-.pf-btn { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--dim); border:1px solid var(--line); padding:8px 18px; background:none; cursor:none; transition:all .2s; }
-.pf-btn:hover, .pf-btn.on { color:var(--bg); background:var(--ink); border-color:var(--ink); }
 .port-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.pi { position:relative; overflow:hidden; background:var(--bg2); aspect-ratio: 1/1; cursor:none; }
-.pi img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s cubic-bezier(.25,.46,.45,.94); }
-.pi:hover img { transform:scale(1.06); }
-.pi-ov { position:absolute; inset:0; padding:20px; background: linear-gradient(to top, rgba(26,24,20,.82) 0%, transparent 55%); display:flex; flex-direction:column; justify-content:flex-end; opacity:0; transition:opacity .3s; z-index:2; }
-.pi:hover .pi-ov { opacity:1; }
-.pi-title { font-family:'Cormorant Garamond',serif; font-size:18px; color:#fff; font-style:italic; }
-.pi-cat { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.5); margin-top:3px; }
-
-/* Travel Section */
-.travel-intro { font-family:'Cormorant Garamond',serif; font-size:clamp(22px,3vw,36px); font-weight:300; font-style:italic; color:var(--ink2); max-width:640px; line-height:1.5; margin-bottom:64px; }
-.city-section { margin-bottom: 48px; }
-.city-meta { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 8px; margin-bottom: 20px; }
-.city-name { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:var(--ink); }
-.city-country { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--dim); }
+.pi { position:relative; overflow:hidden; aspect-ratio: 1/1; cursor:none; }
+.pi img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+.travel-intro { font-family:'Cormorant Garamond',serif; font-size:28px; font-style:italic; color:var(--ink2); margin-bottom:64px; }
 .city-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; }
-.gi { position:relative; overflow:hidden; background:var(--bg2); aspect-ratio: 4/3; cursor:none; }
-.gi img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s ease; }
-.gi:hover img { transform:scale(1.05); }
-
-/* Concerts Row */
-.concerts-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--dim); margin-bottom:16px; }
-.concerts-title { font-family:'Cormorant Garamond',serif; font-size:clamp(28px,4vw,48px); font-weight:300; color:var(--ink); margin-bottom:32px; }
-.concerts-title em { font-style:italic; color:var(--red); }
-.concerts-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:15px; }
-.v-card { position:relative; overflow:hidden; aspect-ratio:4/5; background:var(--bg2); cursor:none; }
-.v-card img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
-.v-card:hover img { transform:scale(1.04); }
-.v-play-btn { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:54px; height:54px; background:rgba(249,247,244,.9); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(0,0,0,.15); transition:transform .3s, background .2s; }
-.v-play-btn::after { content:''; margin-left:4px; border-style:solid; border-width:8px 0 8px 14px; border-color:transparent transparent transparent var(--ink); }
-.v-card:hover .v-play-btn { transform:translate(-50%,-50%) scale(1.1); background:#fff; }
-.v-info { position:absolute; bottom:0; left:0; right:0; padding:24px; background:linear-gradient(to top, rgba(0,0,0,.8) 0%, transparent 100%); color:#fff; pointer-events:none; }
-.v-name { font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; font-weight:300; line-height:1.2; }
-.v-tour { font-size:11px; color:rgba(255,255,255,.6); letter-spacing:.05em; margin-top:2px; }
+.gi { aspect-ratio: 4/3; overflow:hidden; cursor:none; }
+.gi img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
 .dubai-note { padding:24px 28px; border-left:2px solid var(--red); background:var(--red-dim); font-size:13px; color:var(--ink2); line-height:1.8; margin-top:40px; }
-.dubai-note strong { color:var(--red); }
-
-/* Experience Section Layout */
 .exp-layout { display:grid; grid-template-columns:2fr 1fr; gap:80px; }
 .exp-item { padding:28px 0; border-bottom:1px solid var(--line); }
-.exp-item:last-child { border-bottom:none; }
-.exp-period { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; color:var(--red); text-transform:uppercase; margin-bottom:6px; }
-.exp-co { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; color:var(--ink); margin-bottom:2px; }
-.exp-role { font-size:13px; color:var(--dim); margin-bottom:10px; letter-spacing:.02em; }
-.exp-desc { font-size:13px; color:var(--ink2); line-height:1.7; }
-.aside-block { margin-bottom:40px; }
-.aside-title { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--dim); margin-bottom:20px; padding-bottom:10px; border-bottom:1px solid var(--line); }
-.edu-item { padding:16px 0; border-bottom:1px solid var(--line); }
-.edu-item:last-child { border-bottom:none; }
-.edu-deg { font-size:14px; color:var(--ink); font-weight:400; margin-bottom:3px; }
-.edu-sch { font-size:12px; color:var(--dim); }
-.edu-f { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--red); margin-top:4px; }
-.lang-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--line); font-size:13px; color:var(--ink2); }
-.lang-lv { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); }
-.contact-aside a { display:block; font-size:13px; color:var(--ink2); text-decoration:none; padding:6px 0; transition:color .2s; }
-.contact-aside a:hover { color:var(--red); }
-
-/* About Section */
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-.about-heading { font-family:'Cormorant Garamond',serif; font-size: clamp(36px,5vw,60px); font-weight:300; line-height:1.1; margin-bottom:32px; }
-.about-heading em { font-style:italic; color:var(--red); }
-.about-body { font-size:15px; color:var(--ink2); line-height:1.9; margin-bottom:28px; }
+.exp-period { font-family:'DM Mono',monospace; font-size:10px; color:var(--red); text-transform:uppercase; margin-bottom:6px; }
+.exp-co { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; }
+.exp-role { font-size:13px; color:var(--dim); margin-bottom:10px; }
 .about-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:32px; }
-.tag { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); border:1px solid var(--line); padding:6px 14px; transition:all .2s; }
-.tag:hover { color:var(--ink); border-color:var(--ink); }
-.stats-row { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; margin-top:48px; padding-top:40px; border-top:1px solid var(--line); }
-.stat-n { font-family:'Cormorant Garamond',serif; font-size:52px; font-style:italic; color:var(--red); line-height:1; }
-.stat-l { font-size:11px; color:var(--dim); letter-spacing:.06em; margin-top:4px; }
-
-/* Contact Footer Section */
-#contact { background:var(--ink); border-bottom:none; }
-.contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-.contact-heading { font-family:'Cormorant Garamond',serif; font-size:clamp(40px,6vw,80px); font-weight:300; line-height:1.0; color:#fff; margin-bottom:32px; }
+.tag { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); border:1px solid var(--line); padding:6px 14px; }
+#contact { background:var(--ink); color:#fff; }
+.contact-inner { display:grid; grid-template-columns:1fr 1fr; gap:80px; }
+.contact-heading { font-family:'Cormorant Garamond',serif; font-size:clamp(40px,6vw,80px); font-weight:300; }
 .contact-heading em { font-style:italic; color:var(--red); }
-.contact-avail { display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:40px; }
-.c-links { display:flex; flex-direction:column; gap:0; }
-.c-link { display:flex; justify-content:space-between; align-items:center; padding:18px 0; border-bottom:1px solid rgba(255,255,255,.08); text-decoration:none; transition:padding-left .2s; }
-.c-link:hover { padding-left:8px; }
-.c-link-label { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.3); }
-.c-link-val { font-size:14px; color:rgba(255,255,255,.7); transition:color .2s; }
-.c-link:hover .c-link-val { color:var(--red); }
-.c-link-arrow { color:rgba(255,255,255,.2); font-size:16px; transition:color .2s; }
-.c-link:hover .c-link-arrow { color:var(--red); }
-
-footer { background:var(--ink); padding:24px 64px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid rgba(255,255,255,.06); }
-.ft-l { font-family:'Cormorant Garamond',serif; font-size:16px; font-style:italic; color:rgba(255,255,255,.25); }
-.ft-r { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.15em; color:rgba(255,255,255,.18); }
-
-/* Lightbox Module */
-.lb { position:fixed; inset:0; background:rgba(0,0,0,.95); z-index:500; display:none; align-items:center; justify-content:center; }
-.lb.open { display:flex; }
-.lb img, .lb video { max-width:95vw; max-height:85vh; object-fit:contain; display:none; box-shadow: 0 12px 48px rgba(0,0,0,.5); }
-.lb-close { position:absolute; top:24px; right:32px; font-size:28px; color:rgba(255,255,255,.4); cursor:none; transition:color .2s; z-index:501; }
-.lb-close:hover { color:#fff; }
-
-/* Responsive Media Queries */
-@media(max-width:1024px) {
-  .port-grid { grid-template-columns: repeat(2, 1fr); }
-  .city-grid { grid-template-columns: repeat(2, 1fr); }
-}
 @media(max-width:768px) {
   body { cursor: default; }
-  .cur, .curR { display: none !important; } /* Hide custom cursor on mobile */
-  nav { padding:20px 24px; } .nav-links { display:none; } 
-  
-  /* Responsive Hero */
-  #hero { padding:140px 24px 60px; min-height: 100vh; flex-direction: column; justify-content: center; gap: 40px; } 
-  .hero-bg-text { display: none; }
-  .hero-content { width: 100%; min-height: auto; gap: 24px; } 
-  .hero-line { flex-direction: column; align-items: flex-start; gap: 24px; padding-top: 24px; }
-  .hero-scroll { display: none; }
-  
-  .portrait-strip { width: 100%; display: flex; flex-direction: column; align-items: center; }
-  .portrait-inner { max-height: 45vh; }
-  .portrait-inner img { max-height: 45vh; width: auto; }
-  .hero-meta { text-align:center !important; margin-top: 16px; }
-  .hero-role { font-size: 12px !important; }
-  
-  /* Layout Adjustments */
-  .section { padding: 64px 24px; } 
-  .about-grid, .exp-layout, .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-  
-  /* Grid Refinements - Clean Multi-column layout instead of single raw stack */
-  .port-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .city-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .concerts-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  
-  .stats-row { grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; padding-top: 24px; }
-  .stat-n { font-size: 38px; }
-  
-  .c-link { padding: 14px 0; }
-  .c-link-val { font-size: 13px; }
-  
-  footer { padding: 24px; flex-direction: column; align-items: flex-start; gap: 8px; }
-}
-@media(max-width:48px) {
-  /* Ultra small screen fallback */
-  .port-grid, .city-grid, .concerts-grid { grid-template-columns: 1fr; }
+  .cur, .curR { display: none !important; }
+  #hero { flex-direction: column; padding: 120px 24px; }
+  .hero-content { width: 100%; }
+  .portrait-strip { width: 100%; margin-top: 40px; }
+  .port-grid, .city-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-layout, .about-grid, .contact-inner { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
-
 <div class="cur" id="cur"></div><div class="curR" id="curR"></div>
-
-<div class="lb" id="lb" onclick="closeLb()">
-  <span class="lb-close">✕</span><img id="lbImg" src="" alt=""><video id="lbVideo" controls autoplay loop playsinline onclick="event.stopPropagation()"></video>
-</div>
 
 <nav id="nav">
   <a href="#hero" class="nav-logo">Behrooz Tajik</a>
   <ul class="nav-links">
-    <li><a href="#portfolio">Portfolio</a></li><li><a href="#travel">Travel</a></li><li><a href="#experience">Experience</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+    <li><a href="#portfolio">Portfolio</a></li><li><a href="#travel">Travel</a></li><li><a href="#experience">Experience</a></li><li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section id="hero">
-  <div class="hero-bg-text">Visual</div>
-  
   <div class="hero-content">
     <h1 class="hero-name">Behrooz<br><em>Tajik</em></h1>
     <div class="hero-line">
-      <p class="hero-desc">5 years crafting visual stories — brand identities and commercial photography. Based in Tehran.</p>
-      <div class="hero-scroll"><div class="scroll-arrow"></div>Scroll</div>
+      <p class="hero-desc">Visual professional based in Tehran. Focused on commercial photography, creative branding, and production design.</p>
     </div>
   </div>
-
   <div class="portrait-strip">
-    <div class="portrait-inner">
-      <img src="profile.jpg" alt="Behrooz Tajik">
-    </div>
-    <div class="hero-meta">
-      <div class="hero-role">Graphic Designer<br>Photographer</div>
-      <div class="hero-avail"><span class="avail-dot"></span>Available for work</div>
-    </div>
+    <div class="portrait-inner"><img src="profile.jpg" alt="Behrooz Tajik"></div>
+    <div class="hero-meta"><div class="hero-role">Graphic Designer · Photographer</div></div>
   </div>
 </section>
 
 <section id="portfolio" class="section">
   <div class="eyebrow">Portfolio</div>
-  <div class="port-filter">
-    <button class="pf-btn on" onclick="pf(this,'all')">All</button>
-    <button class="pf-btn" onclick="pf(this,'design')">Graphic Design (2)</button>
-    <button class="pf-btn" onclick="pf(this,'photo')">Photography (4)</button>
-  </div>
-  <div class="port-grid" id="portGrid">
-    <div class="pi" data-cat="design" onclick="openLbImg(this)"><img src="design1.jpg" alt="Design 1"><div class="pi-ov"><div class="pi-title">Project One</div><div class="pi-cat">Graphic Design</div></div></div>
-    <div class="pi" data-cat="design" onclick="openLbImg(this)"><img src="design2.jpg" alt="Design 2"><div class="pi-ov"><div class="pi-title">Project Two</div><div class="pi-cat">Graphic Design</div></div></div>
-    <div class="pi" data-cat="photo" onclick="openLbImg(this)"><img src="photo1.jpg" alt="Photo 1"><div class="pi-ov"><div class="pi-title">Visual Capture I</div><div class="pi-cat">Photography</div></div></div>
-    <div class="pi" data-cat="photo" onclick="openLbImg(this)"><img src="photo2.jpg" alt="Photo 2"><div class="pi-ov"><div class="pi-title">Visual Capture II</div><div class="pi-cat">Photography</div></div></div>
-    <div class="pi" data-cat="photo" onclick="openLbImg(this)"><img src="photo3.jpg" alt="Photo 3"><div class="pi-ov"><div class="pi-title">Visual Capture III</div><div class="pi-cat">Photography</div></div></div>
-    <div class="pi" data-cat="photo" onclick="openLbImg(this)"><img src="photo4.jpg" alt="Photo 4"><div class="pi-ov"><div class="pi-title">Visual Capture IV</div><div class="pi-cat">Photography</div></div></div>
+  <div class="port-grid">
+    <div class="pi"><img src="design1.jpg" alt="Work"></div><div class="pi"><img src="design2.jpg" alt="Work"></div>
+    <div class="pi"><img src="photo1.jpg" alt="Work"></div><div class="pi"><img src="photo2.jpg" alt="Work"></div>
+    <div class="pi"><img src="photo3.jpg" alt="Work"></div><div class="pi"><img src="photo4.jpg" alt="Work"></div>
   </div>
 </section>
 
 <section id="travel" class="section section-alt">
   <div class="eyebrow">Travel & Lifestyle</div>
-  <p class="travel-intro">"Through the lens — documenting places, cultures, and live music experiences across borders."</p>
-  
-  <div class="city-section">
-    <div class="city-meta"><span class="city-name">Paris</span><span class="city-country">France · Summer 2024</span></div>
-    <div class="city-grid">
-      <div class="gi" onclick="openLbImg(this)"><img src="paris1.jpg" alt="Paris 1"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="paris2.jpg" alt="Paris 2"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="paris3.jpg" alt="Paris 3"></div>
-    </div>
+  <p class="travel-intro">"Capturing my travels through the lens — documenting urban environments, cultural moments, and live music experiences."</p>
+  <div class="city-grid">
+    <div class="gi"><img src="paris1.jpg" alt="Travel"></div><div class="gi"><img src="paris2.jpg" alt="Travel"></div><div class="gi"><img src="paris3.jpg" alt="Travel"></div>
   </div>
-
-  <div class="city-section">
-    <div class="city-meta"><span class="city-name">Barcelona</span><span class="city-country">Spain · Summer 2024</span></div>
-    <div class="city-grid">
-      <div class="gi" onclick="openLbImg(this)"><img src="barcelona1.jpg" alt="Barcelona 1"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="barcelona2.jpg" alt="Barcelona 2"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="barcelona3.jpg" alt="Barcelona 3"></div>
-    </div>
-  </div>
-
-  <div class="city-section">
-    <div class="city-meta"><span class="city-name">Bruges</span><span class="city-country">Belgium · Summer 2024</span></div>
-    <div class="city-grid">
-      <div class="gi" onclick="openLbImg(this)"><img src="bruges1.jpg" alt="Bruges 1"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="bruges2.jpg" alt="Bruges 2"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="bruges3.jpg" alt="Bruges 3"></div>
-    </div>
-  </div>
-
-  <div class="city-section">
-    <div class="city-meta"><span class="city-name">Brussels</span><span class="city-country">Belgium · Summer 2024</span></div>
-    <div class="city-grid">
-      <div class="gi" onclick="openLbImg(this)"><img src="brussels1.jpg" alt="Brussels 1"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="brussels2.jpg" alt="Brussels 2"></div>
-      <div class="gi" onclick="openLbImg(this)"><img src="brussels3.jpg" alt="Brussels 3"></div>
-    </div>
-  </div>
-
-  <div class="concerts-label" style="margin-top:64px;">Dubai · International Events</div>
-  <div class="concerts-title">Live Music <em>Footage</em></div>
-  <div class="concerts-grid">
-    <div class="v-card" onclick="openLbVid('edsheeran.mp4')"><img src="concert_edsheeran.jpg" alt="Ed Sheeran"><div class="v-play-btn"></div><div class="v-info"><div class="v-name">Ed Sheeran</div><div class="v-tour">+ − = ÷ x Tour · Dubai</div></div></div>
-    <div class="v-card" onclick="openLbVid('westlife.mp4')"><img src="concert_westlife.jpg" alt="Westlife"><div class="v-play-btn"></div><div class="v-info"><div class="v-name">Westlife</div><div class="v-tour">The Wild Dreams Tour · Dubai</div></div></div>
-    <div class="v-card" onclick="openLbVid('calumscott.mp4')"><img src="concert_calumscott.jpg" alt="Calum Scott"><div class="v-play-btn"></div><div class="v-info"><div class="v-name">Calum Scott</div><div class="v-tour">Live in Dubai</div></div></div>
-  </div>
-  <div class="dubai-note">Over the past few years I've made <strong>4 trips to Dubai</strong> to attend international live music events — capturing atmosphere and live moments on location.</div>
+  <div class="dubai-note">Over the past few years, I have traveled to Dubai on multiple occasions to attend international live music events, capturing the atmosphere and live performances on location.</div>
 </section>
 
 <section id="experience" class="section">
@@ -354,109 +109,43 @@ footer { background:var(--ink); padding:24px 64px; display:flex; justify-content
   <div class="exp-layout">
     <div>
       <div class="exp-item">
-        <div class="exp-period">Oct 2024 – Present · 1 yr 9 mos</div>
+        <div class="exp-period">Oct 2024 – Present</div>
         <div class="exp-co">Sens Studio</div>
-        <div class="exp-role">Photographer · Graphic Designer — Full-time · Tehran</div>
-        <div class="exp-desc">Commercial photography and graphic design. Full visual production pipeline from concept and shoot to post-production and final delivery.</div>
+        <div class="exp-role">Photographer · Editor · Graphic Designer · Tehran</div>
+        <div class="exp-desc">Managing visual production from concept to final delivery. Working on commercial photography projects, video editing, and brand visual assets.</div>
       </div>
       <div class="exp-item">
-        <div class="exp-period">May 2021 – Nov 2024 · 3 yrs 7 mos</div>
+        <div class="exp-period">May 2021 – Feb 2022 · 10 mos</div>
         <div class="exp-co">Freelance</div>
-        <div class="exp-role">Graphic Designer — Self-employed</div>
-        <div class="exp-desc">Brand identity, advertising visuals, and creative design for clients across various industries. Tools: Adobe Illustrator, Autodesk 3ds Max and more.</div>
-      </div>
-    </div>
-    <div>
-      <div class="aside-block">
-        <div class="aside-title">Education</div>
-        <div class="edu-item"><div class="edu-deg">Bachelor's Degree</div><div class="edu-sch">University of Applied Science & Technology</div><div class="edu-f">Illustration</div></div>
-        <div class="edu-item"><div class="edu-deg">Bachelor of Engineering</div><div class="edu-sch">Islamic Azad University</div><div class="edu-f">Computer Software Engineering</div></div>
-      </div>
-      <div class="aside-block">
-        <div class="aside-title">Languages</div>
-        <div class="lang-row"><span>Persian</span><span class="lang-lv">Native</span></div>
-        <div class="lang-row"><span>English</span><span class="lang-lv">Professional</span></div>
-      </div>
-      <div class="aside-block">
-        <div class="aside-title">Contact Info</div>
-        <div class="contact-aside">
-          <a href="mailto:bhrzt@yahoo.com">bhrzt@yahoo.com</a>
-          <a href="tel:+989121486092">+98 912 148 6092</a>
-          <a href="https://www.linkedin.com/in/behrooz-tajik-987ab395" target="_blank">LinkedIn ↗</a>
-        </div>
+        <div class="exp-role">Graphic Designer</div>
+        <div class="exp-desc">Worked on various brand identity and advertising design projects. Focused on using tools like Adobe Illustrator for client deliverables.</div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="about" class="section section-alt">
-  <div class="eyebrow">About</div>
-  <div class="about-grid">
-    <div><h2 class="about-heading">Creative<br><em>professional</em><br>with a lens.</h2></div>
-    <div>
-      <p class="about-body">I'm Behrooz Tajik — a Tehran-based graphic designer and photographer with over 5 years of experience across commercial and creative work.</p>
-      <p class="about-body">Currently at Sens Studio, I lead visual production from concept to final delivery. My dual background in Illustration and Software Engineering gives me a rare ability to bridge creative vision with technical precision.</p>
-      <div class="about-tags">
-        <span class="tag">Photography</span><span class="tag">Graphic Design</span><span class="tag">Adobe Suite</span><span class="tag">3ds Max</span><span class="tag">Brand Identity</span><span class="tag">Color Grading</span><span class="tag">Art Direction</span>
-      </div>
-      <div class="stats-row">
-        <div><div class="stat-n">5+</div><div class="stat-l">Years experience</div></div>
-        <div><div class="stat-n">2</div><div class="stat-l">Degrees</div></div>
-        <div><div class="stat-n">4</div><div class="stat-l">Intl. trips</div></div>
-      </div>
-    </div>
+  <div class="eyebrow">Expertise</div>
+  <div class="about-tags">
+    <span class="tag">Photography</span><span class="tag">Graphic Design</span><span class="tag">Adobe Suite</span><span class="tag">Brand Identity</span><span class="tag">Color Grading</span><span class="tag">Art Direction</span>
   </div>
 </section>
 
 <section id="contact" class="section">
-  <div class="eyebrow" style="color:rgba(255,255,255,.3);">Get in touch</div>
   <div class="contact-inner">
-    <div><h2 class="contact-heading">Let's work<br><em>together.</em></h2><div class="contact-avail">Available for work</div></div>
-    <div class="c-links">
-      <a href="mailto:bhrzt@yahoo.com" class="c-link"><span class="c-link-label">Email</span><span class="c-link-val">bhrzt@yahoo.com</span><span class="c-link-arrow">→</span></a>
-      <a href="tel:+989121486092" class="c-link"><span class="c-link-label">Phone</span><span class="c-link-val">+98 912 148 6092</span><span class="c-link-arrow">→</span></a>
-      <a href="https://www.linkedin.com/in/behrooz-tajik-987ab395" target="_blank" class="c-link"><span class="c-link-label">LinkedIn</span><span class="c-link-val">behrooz-tajik-987ab395</span><span class="c-link-arrow">→</span></a>
-      <a class="c-link" style="pointer-events:none;"><span class="c-link-label">Location</span><span class="c-link-val">Tehran, Iran</span></a>
-    </div>
+    <div><h2 class="contact-heading">Let's work<br><em>together.</em></h2></div>
+    <div><a href="mailto:bhrzt@yahoo.com">bhrzt@yahoo.com</a><br><a href="tel:+989121486092">+98 912 148 6092</a></div>
   </div>
 </section>
 
-<footer>
-  <div class="ft-l">Behrooz Tajik</div>
-  <div class="ft-r">© 2026 · All rights reserved</div>
-</footer>
-
 <script>
-const cur = document.getElementById('cur'), curR = document.getElementById('curR');
-// Only track mouse movement if screen is wide enough (not touch device)
+window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60); });
 if (window.innerWidth > 768) {
   document.addEventListener('mousemove', e => {
-    cur.style.transform  = `translate(${e.clientX-3}px,${e.clientY-3}px)`;
-    curR.style.transform = `translate(${e.clientX-14}px,${e.clientY-14}px)`;
+    document.getElementById('cur').style.transform = `translate(${e.clientX-3}px,${e.clientY-3}px)`;
+    document.getElementById('curR').style.transform = `translate(${e.clientX-14}px,${e.clientY-14}px)`;
   });
 }
-window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60); });
-function pf(btn, cat) {
-  document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('on')); btn.classList.add('on');
-  document.querySelectorAll('.pi').forEach(item => { item.style.display = (cat==='all' || item.dataset.cat===cat) ? '' : 'none'; });
-}
-function openLbImg(el) {
-  const img = el.querySelector('img'); if (!img) return;
-  document.getElementById('lbVideo').style.display = 'none'; document.getElementById('lbVideo').src = '';
-  document.getElementById('lbImg').src = img.src; document.getElementById('lbImg').style.display = 'block';
-  document.getElementById('lb').classList.add('open');
-}
-function openLbVid(vidSrc) {
-  document.getElementById('lbImg').style.display = 'none'; document.getElementById('lbVideo').src = vidSrc;
-  document.getElementById('lbVideo').style.display = 'block'; document.getElementById('lb').classList.add('open');
-}
-function closeLb() { document.getElementById('lb').classList.remove('open'); document.getElementById('lbVideo').pause(); document.getElementById('lbVideo').src = ''; }
-const revObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
-}, { threshold:.05 });
-document.querySelectorAll('.exp-item, .v-card, .gi, .pi, .about-grid, .aside-block, .city-section').forEach(el => {
-  el.style.opacity='0'; el.style.transform='translateY(18px)'; el.style.transition='opacity .6s ease, transform .6s ease'; revObs.observe(el);
-});
 </script>
 </body>
 </html>
