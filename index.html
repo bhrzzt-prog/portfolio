@@ -6,35 +6,33 @@
 <title>Behrooz Tajik — Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght=200;300;400&family=DM+Mono:wght=300&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #f9f7f4; --bg2: #f2efe9; --ink: #1a1814; --ink2: #3d3a35; --dim: #9a9488; --line: #e2ddd6; --red: #b5392a; --red-dim: rgba(181,57,42,0.12); }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: var(--bg); color: var(--ink); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.6; }
-nav { display: flex; align-items:center; justify-content:space-between; padding: 32px 64px; }
-.nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; color:var(--ink); text-decoration:none; }
-.nav-links { display:flex; gap:30px; list-style:none; }
+:root { --bg: #f9f7f4; --ink: #1a1814; --red: #b5392a; --line: #e2ddd6; }
+body { background: var(--bg); color: var(--ink); font-family: 'Jost', sans-serif; margin: 0; }
+nav { display: flex; align-items:center; justify-content:space-between; padding: 40px 64px; }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; text-decoration:none; color:var(--ink); }
+.nav-links { display:flex; gap:40px; list-style:none; }
 .nav-links a { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink); text-decoration:none; }
 #hero { padding: 80px 64px; }
 .hero-name { font-family:'Cormorant Garamond',serif; font-size: 80px; font-weight:300; line-height:.9; }
 .hero-name em { font-style:italic; color:var(--red); }
-.hero-desc { font-size:16px; color:var(--ink2); max-width:400px; margin-top:20px; }
+.hero-desc { font-size:16px; color:#555; max-width:400px; margin-top:20px; }
 .section { padding: 80px 64px; border-top: 1px solid var(--line); }
 .eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--red); margin-bottom:40px; }
 .port-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .pi img { width:100%; height:auto; }
-.exp-item { margin-bottom: 40px; }
+.exp-item { margin-bottom: 30px; }
 .exp-co { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; }
-.exp-role { font-size:14px; color:var(--dim); margin-bottom:5px; }
+.exp-role { font-size:14px; color:#666; }
 .about-tags { display:flex; flex-wrap:wrap; gap:10px; }
-.tag { font-family:'DM Mono',monospace; font-size:10px; text-transform:uppercase; border:1px solid var(--line); padding:8px 16px; color:var(--ink2); }
+.tag { font-family:'DM Mono',monospace; font-size:10px; text-transform:uppercase; border:1px solid var(--line); padding:8px 16px; color:#555; }
 #contact { background:var(--ink); color:#fff; padding: 80px 64px; }
-.contact-heading { font-family:'Cormorant Garamond',serif; font-size:60px; font-weight:300; margin-bottom:20px; }
+.contact-heading { font-family:'Cormorant Garamond',serif; font-size:60px; font-weight:300; margin-bottom:30px; }
 .contact-heading em { font-style:italic; color:var(--red); }
-.contact-info a { color:#fff; text-decoration:none; display:block; margin-bottom:10px; }
+.contact-links a { color:#fff; text-decoration:none; display:block; margin-bottom:12px; font-size: 16px; }
 @media(max-width:768px) {
-  nav { padding: 32px 24px; flex-direction: column; gap: 20px; }
+  nav { padding: 30px 24px; flex-direction: column; gap: 20px; }
   #hero, .section, #contact { padding: 40px 24px; }
   .port-grid { grid-template-columns: 1fr; }
-  .contact-heading { font-size: 40px; }
 }
 </style>
 </head>
@@ -63,8 +61,9 @@ nav { display: flex; align-items:center; justify-content:space-between; padding:
 
 <section id="travel" class="section">
   <div class="eyebrow">Travel & Lifestyle</div>
-  <p style="font-family:'Cormorant Garamond',serif; font-size:24px; margin-bottom:30px;">"Capturing my travels through the lens."</p>
-  <p>Over the past few years, I have traveled to Dubai on multiple occasions to attend international live music events, capturing the atmosphere and live performances on location.</p>
+  <p style="font-family:'Cormorant Garamond',serif; font-size:24px; margin-bottom:20px;">"Capturing my travels and live music experiences."</p>
+  <p style="max-width: 600px; margin-bottom: 20px;">Through the lens — documenting urban environments, cultural moments, and live music experiences during my international travels.</p>
+  <p style="max-width: 600px; border-left:2px solid var(--red); padding-left: 20px;">Over the past few years, I have traveled to Dubai on multiple occasions to attend international live music events, capturing the atmosphere and live performances on location.</p>
 </section>
 
 <section id="experience" class="section">
@@ -88,7 +87,7 @@ nav { display: flex; align-items:center; justify-content:space-between; padding:
 
 <section id="contact">
   <h2 class="contact-heading">Let's work<br><em>together.</em></h2>
-  <div class="contact-info">
+  <div class="contact-links">
     <a href="mailto:bhrzt@yahoo.com">bhrzt@yahoo.com</a>
     <a href="tel:+989121486092">+98 912 148 6092</a>
     <a href="https://www.linkedin.com/in/behrooz-tajik-987ab395" target="_blank">LinkedIn ↗</a>
