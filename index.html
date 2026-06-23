@@ -4,66 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Behrooz Tajik — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght=200;300;400&family=DM+Mono:wght=300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&family=DM+Mono:wght=300&display=swap" rel="stylesheet">
 <style>
-:root { --bg: #f9f7f4; --ink: #1a1814; --red: #b5392a; --line: #e2ddd6; }
-body { background: var(--bg); color: var(--ink); font-family: 'Jost', sans-serif; margin: 0; }
-nav { display: flex; align-items:center; justify-content:space-between; padding: 40px 64px; }
-.nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; text-decoration:none; color:var(--ink); }
-.nav-links { display:flex; gap:40px; list-style:none; }
-.nav-links a { font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink); text-decoration:none; }
-#hero { padding: 80px 64px; }
-.hero-name { font-family:'Cormorant Garamond',serif; font-size: 80px; font-weight:300; line-height:.9; }
-.hero-name em { font-style:italic; color:var(--red); }
-.hero-desc { font-size:16px; color:#555; max-width:400px; margin-top:20px; }
+:root { --bg: #f9f7f4; --bg2: #f2efe9; --ink: #1a1814; --ink2: #3d3a35; --dim: #9a9488; --line: #e2ddd6; --red: #b5392a; --red-dim: rgba(181,57,42,0.12); }
+body { background: var(--bg); color: var(--ink); font-family: 'Jost', sans-serif; font-weight: 300; line-height: 1.6; margin: 0; }
+nav { padding: 40px 64px; display: flex; align-items:center; justify-content:space-between; }
+.nav-logo { font-family:'Cormorant Garamond',serif; font-size:20px; font-style:italic; color:var(--ink); text-decoration:none; }
 .section { padding: 80px 64px; border-top: 1px solid var(--line); }
 .eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.3em; text-transform:uppercase; color:var(--red); margin-bottom:40px; }
-.port-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.pi img { width:100%; height:auto; }
-.exp-item { margin-bottom: 30px; }
+.exp-item { margin-bottom: 40px; }
 .exp-co { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:600; }
-.exp-role { font-size:14px; color:#666; }
-.about-tags { display:flex; flex-wrap:wrap; gap:10px; }
+.exp-role { font-size:14px; color:#666; margin-bottom:10px; }
+.about-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
 .tag { font-family:'DM Mono',monospace; font-size:10px; text-transform:uppercase; border:1px solid var(--line); padding:8px 16px; color:#555; }
 #contact { background:var(--ink); color:#fff; padding: 80px 64px; }
-.contact-heading { font-family:'Cormorant Garamond',serif; font-size:60px; font-weight:300; margin-bottom:30px; }
+.contact-heading { font-family:'Cormorant Garamond',serif; font-size:60px; font-weight:300; }
 .contact-heading em { font-style:italic; color:var(--red); }
-.contact-links a { color:#fff; text-decoration:none; display:block; margin-bottom:12px; font-size: 16px; }
-@media(max-width:768px) {
-  nav { padding: 30px 24px; flex-direction: column; gap: 20px; }
-  #hero, .section, #contact { padding: 40px 24px; }
-  .port-grid { grid-template-columns: 1fr; }
-}
+.contact-links a { color:#fff; text-decoration:none; display:block; margin-top:15px; font-size: 16px; }
+@media(max-width:768px) { nav, .section, #contact { padding: 40px 24px; } }
 </style>
 </head>
 <body>
 
 <nav>
   <a href="#" class="nav-logo">Behrooz Tajik</a>
-  <ul class="nav-links">
-    <li><a href="#portfolio">Portfolio</a></li><li><a href="#travel">Travel</a></li><li><a href="#experience">Experience</a></li>
-  </ul>
 </nav>
 
-<section id="hero">
-  <h1 class="hero-name">Behrooz<br><em>Tajik</em></h1>
-  <p class="hero-desc">Visual professional based in Tehran. Focused on commercial photography, creative branding, and production design.</p>
-</section>
-
-<section id="portfolio" class="section">
-  <div class="eyebrow">Portfolio</div>
-  <div class="port-grid">
-    <div class="pi"><img src="design1.jpg" alt="Work"></div>
-    <div class="pi"><img src="design2.jpg" alt="Work"></div>
-    <div class="pi"><img src="photo1.jpg" alt="Work"></div>
-  </div>
-</section>
-
-<section id="travel" class="section">
-  <div class="eyebrow">Travel & Lifestyle</div>
-  <p style="font-family:'Cormorant Garamond',serif; font-size:24px; margin-bottom:20px;">"Capturing my travels and live music experiences."</p>
-  <p style="max-width: 600px; margin-bottom: 20px;">Through the lens — documenting urban environments, cultural moments, and live music experiences during my international travels.</p>
-  <p style="max-width: 600px; border-left:2px solid var(--red); padding-left: 20px;">Over the past few years, I have traveled to Dubai on multiple occasions to attend international live music events, capturing the atmosphere and live performances on location.</p>
+<section id="hero" class="section">
+  <h1 style="font-family:'Cormorant Garamond',serif; font-size: 60px; font-weight:300;">Behrooz Tajik</h1>
+  <p style="max-width:400px; margin-top:20px;">Visual professional based in Tehran. Focused on commercial photography, creative branding, and production design.</p>
 </section>
 
 <section id="experience" class="section">
@@ -71,17 +42,27 @@ nav { display: flex; align-items:center; justify-content:space-between; padding:
   <div class="exp-item">
     <div class="exp-co">Sens Studio</div>
     <div class="exp-role">Photographer · Editor · Graphic Designer · Tehran (Oct 2024 – Present)</div>
+    <p>Providing content creation, clip construction, scriptwriting, and production services for various brands.</p>
   </div>
   <div class="exp-item">
     <div class="exp-co">Freelance</div>
     <div class="exp-role">Graphic Designer (May 2021 – Feb 2022)</div>
+    <p>Specialized graphic design and creative visual services.</p>
   </div>
+  <div class="eyebrow" style="margin-top:40px;">Education</div>
+  <div class="exp-role">• Bachelor's Degree in Graphic Design</div>
+  <div class="exp-role">• Bachelor's Degree in Computer Science</div>
+</section>
+
+<section id="travel" class="section">
+  <div class="eyebrow">Travel & Lifestyle</div>
+  <p style="max-width: 600px;">Over the past few years, I have traveled to Dubai on multiple occasions to attend international live music events, capturing the atmosphere and live performances on location.</p>
 </section>
 
 <section id="about" class="section">
   <div class="eyebrow">Expertise</div>
   <div class="about-tags">
-    <span class="tag">Photography</span><span class="tag">Graphic Design</span><span class="tag">Adobe Suite</span><span class="tag">Brand Identity</span><span class="tag">Color Grading</span><span class="tag">Art Direction</span>
+    <span class="tag">Photography</span><span class="tag">Graphic Design</span><span class="tag">Adobe Suite</span><span class="tag">Brand Identity</span><span class="tag">Color Grading</span><span class="tag">Art Direction</span><span class="tag">Python</span>
   </div>
 </section>
 
