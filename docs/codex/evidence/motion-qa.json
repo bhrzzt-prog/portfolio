@@ -1,0 +1,15 @@
+{
+  "source": "Actual live WebGL canvas.captureStream and MediaRecorder",
+  "sourceRevision": 12,
+  "gpu": "Intel UHD Graphics 620 / ANGLE Direct3D11",
+  "mp4Bytes": 3928903,
+  "mp4Sha256": "795807a75f6deb91a25543da90462c4404f76f2e2bfbe03cff79c60a06e5d115",
+  "webmSha256": "cd80d659c7002d6921c90f325b7e87ac3d3ba2159bf2ec341e6f2340c02e5c23",
+  "dimensions": [
+    1198,
+    766
+  ],
+  "meanPixelDifferenceBetween05And65": 12.940277602211983,
+  "encoding": "H264 level 4.1; constant 24 fps; no optical-flow or AI interpolation",
+  "decodeLog": "Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\\Users\\bhrzt\\Documents\\Codex\\2026-10-25\\new-chat\\outputs\\Cosmic-Tree-R9-WebGL-motion.mp4':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Duration: 00:00:07.88, start: 0.000000, bitrate: 3991 kb/s\n  Stream #0:0[0x1](eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt470bg/bt709/iec61966-2-1, progressive), 1198x766 [SAR 1:1 DAR 599:383], 3988 kb/s, 24 fps, 24 tbr, 12288 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 libx264\nStream mapping:\n  Stream #0:0 -> #0:0 (h264 (native) -> wrapped_avframe (native))\nPress [q] to stop, [?] for help\nOutput #0, null, to 'pipe:':\n  Metadata:\n    major_brand     : isom\n    minor_version   : 512\n    compatible_brands: isomiso2avc1mp41\n    encoder         : Lavf61.7.100\n  Stream #0:0(eng): Video: wrapped_avframe, yuv420p(tv, bt470bg/bt709/iec61966-2-1, progressive), 1198x766 [SAR 1:1 DAR 599:383], q=2-31, 200 kb/s, 24 fps, 24 tbn (default)\n      Metadata:\n        handler_name    : VideoHandler\n        vendor_id       : [0][0][0][0]\n        encoder         : Lavc61.19.100 wrapped_avframe\n[out#0/null @ 0000020e55f54e80] video:81KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nframe=  189 fps=0.0 q=-0.0 Lsize=N/A time=00:00:07.87 bitrate=N/A speed=16.9x    \n"
+}

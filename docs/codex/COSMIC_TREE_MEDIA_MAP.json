@@ -15,7 +15,8 @@
     "url": "https://higgsfield.ai/3d-jutsu/42d9d5d3-1eba-4b84-a4db-beb9b030a66a",
     "lastVisuallyReviewedRevision": 7,
     "photorealFidelityApproved": false,
-    "liveWebGLTestPassed": false
+    "liveWebGLTestPassed": true,
+    "lastImplementationRevision": 12
   },
   "forbiddenProductionAssets": [
     "cosmic_tree_of_visual_stories.png",

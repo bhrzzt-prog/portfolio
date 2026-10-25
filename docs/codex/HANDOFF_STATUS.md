@@ -1,5 +1,21 @@
 # Cosmic Tree R9 — Codex handoff state (25 October 2026)
 
+## CURRENT — actual Three.js staging implemented, visual fidelity still pending
+
+The later local implementation supersedes the earlier missing-source/runtime
+blockers below. Both originals were restored and hash-verified. The same
+Higgsfield scene was refined through revision 12, with an editable archive of
+the original geometry. A real interactive static site now builds from
+`src/cosmic/` and `assets/runtime/COSMIC_TREE_R9.glb`. Current source and binary
+checksums are in `R9_RUNTIME_ASSETS.json`; restore the new .blend with
+`python scripts/restore-cosmic-tree-r9.py`.
+
+Browser rendering was verified on Intel UHD 620; responsive, keyboard, modal,
+local film, reduced-motion and no-WebGL QA results are in `IMPLEMENTATION_R9.md`
+and `evidence/`. The source root `index.html` and existing `rebuild/` are unchanged.
+Photoreal reference matching and owner acceptance are **not passed**. Keep the
+same PR draft, unmerged and undeployed. Earlier entries remain as execution history.
+
 ## READY FOR CODEX IMPLEMENTATION, NOT READY FOR PUBLICATION
 
 - Repo: bhrzzt-prog/portfolio, **static index.html** on main; preserve this existing site.

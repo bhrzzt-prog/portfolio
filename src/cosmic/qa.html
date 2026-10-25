@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>R9 local motion evidence</title><style>body{margin:0;background:#080b0f;color:#ddd;font:13px Arial}header{height:70px;display:flex;align-items:center;gap:20px;padding:0 25px}button,a{color:#eee;background:#292722;border:1px solid #ad9566;padding:12px;cursor:pointer}iframe{border:0;width:100%;height:900px}#status{color:#bfb8a9}#download[hidden]{display:none}</style></head><body><header><button id="record">Record 8 seconds of actual WebGL</button><a id="download" hidden download="Cosmic-Tree-R9-WebGL-motion.webm">Download motion evidence</a><span id="status" role="status">Waiting for the 3D scene.</span></header><iframe src="./" title="Actual R9 staging site"></iframe><script type="module">
+const frame=document.querySelector('iframe'),button=document.querySelector('#record'),status=document.querySelector('#status');
+let previousUrl;
+button.addEventListener('click',()=>{
+ const canvas=frame.contentDocument.querySelector('canvas');
+ if(!canvas?.dataset.r9Metrics){status.textContent='Scene is not ready.';return}
+ const metrics=JSON.parse(canvas.dataset.r9Metrics);
+ if(!metrics.moving){frame.contentDocument.querySelector('#motion-toggle').click()}
+ const stream=canvas.captureStream(24),chunks=[];
+ const type=['video/webm;codecs=vp8','video/webm;codecs=vp9','video/webm'].find(t=>MediaRecorder.isTypeSupported(t));
+ const recorder=new MediaRecorder(stream,{mimeType:type,videoBitsPerSecond:6000000});
+ recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+ recorder.onstop=()=>{stream.getTracks().forEach(t=>t.stop());if(previousUrl)URL.revokeObjectURL(previousUrl);previousUrl=URL.createObjectURL(new Blob(chunks,{type}));const link=document.querySelector('#download');link.href=previousUrl;link.hidden=false;button.disabled=false;status.textContent=`Captured actual WebGL canvas; ${Math.round(chunks.reduce((n,b)=>n+b.size,0)/1024)} KB. GPU: ${metrics.gpu}`};
+ recorder.start();button.disabled=true;status.textContent='Recording the live scene for 8 seconds…';setTimeout(()=>recorder.stop(),8000);
+});
+frame.addEventListener('load',()=>{status.textContent='Scene page loaded. Wait for its motion control to become available.'});
+</script></body></html>

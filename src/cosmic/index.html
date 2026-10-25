@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Photography, film and creative direction by Behrooz Tajik, founder of SENS Studio.">
+  <title>Behrooz Tajik — Photography & Film</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/addons/"}}</script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#photography">Skip to photography</a>
+<header class="site-header">
+  <a class="wordmark" href="#home">BEHROOZ TAJIK</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="header-links">Menu <span aria-hidden="true">＋</span></button>
+  <div id="header-links" class="header-links">
+    <nav aria-label="Main"><a href="#photography">Photography</a><a href="#film">Film</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <div class="social-links" aria-label="Profiles and CV">
+      <a href="https://www.instagram.com/behroooztajik/" target="_blank" rel="noopener noreferrer" aria-label="Personal Instagram">IG</a>
+      <a href="https://www.instagram.com/sensstudio__/" target="_blank" rel="noopener noreferrer" aria-label="SENS Studio Instagram">SENS</a>
+      <a href="https://t.me/bhrzt" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a>
+      <a href="https://www.linkedin.com/in/behrooz-tajik-987ab395" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+      <a href="media/Behrooz_Tajik_CV_CURRENT.pdf" target="_blank" rel="noopener" aria-label="Open current 2026 CV PDF">CV ↗</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home" aria-label="Cosmic Tree of Life — interactive photography gallery">
+    <div id="scene" aria-hidden="true"></div>
+    <div class="hero-vignette" aria-hidden="true"></div>
+    <div class="floating-gallery" id="floating-gallery" aria-label="Six photographs"></div>
+    <h1 class="hero-role"><span aria-hidden="true"></span>Photographer &amp; Creative Director</h1>
+    <div class="hero-bottom"><a class="scroll-link" href="#photography">Explore the work <span aria-hidden="true">↓</span></a><button id="motion-toggle" type="button" aria-pressed="false">Motion paused <span aria-hidden="true">▷</span></button></div>
+    <p class="sr-only" id="scene-status" role="status">The photographs are available below. Loading the interactive scene.</p>
+  </section>
+  <section class="work-section" id="photography">
+    <div class="section-heading"><div><p class="eyebrow">01 / Photography</p><h2>Stories, in a frame.</h2></div><p class="section-note">Fashion, people, movement.<br>Made with intention.</p></div>
+    <div class="filters" role="group" aria-label="Filter photography"><button data-filter="all" aria-pressed="true">All photographs</button><button data-filter="fashion" aria-pressed="false">Fashion</button><button data-filter="sport" aria-pressed="false">Sports</button><button data-filter="food" aria-pressed="false">Commercial</button><button data-filter="portrait" aria-pressed="false">Portraits</button></div>
+    <div class="photo-grid" id="photo-grid"></div>
+    <a class="text-link" href="original/index.html#travel">Travel journal &amp; the complete portfolio <span aria-hidden="true">↗</span></a>
+  </section>
+  <section class="film-section" id="film">
+    <div class="section-heading"><div><p class="eyebrow">02 / Film</p><h2>Feel the moment.</h2></div><p class="section-note">Live performances.<br>Movement, light and atmosphere.</p></div>
+    <div class="film-grid" id="film-grid"></div>
+    <a class="text-link" href="original/rebuild/work/film.html">Open the existing film collection <span aria-hidden="true">↗</span></a>
+  </section>
+  <section class="about-section" id="about">
+    <div class="about-portrait"><img src="media/profile.jpg" alt="Portrait of Behrooz" loading="lazy" width="600" height="750"></div>
+    <div class="about-copy"><p class="eyebrow">03 / About</p><h2>From the first idea<br>to the final image.</h2><p>I'm a Tehran-based creative director and photographer, and founder of SENS Studio. I work across commercial photography, graphic and web design, film, and visual content.</p><p>At SENS, I take projects from concept and art direction through shooting, editing, colour and final delivery.</p><a class="text-link" href="media/Behrooz_Tajik_CV_CURRENT.pdf" target="_blank" rel="noopener">Read my CV <span aria-hidden="true">↗</span></a><p class="affiliation">SENS STUDIO / TEHRAN, IRAN</p></div>
+  </section>
+  <section class="contact-section" id="contact"><p class="eyebrow">04 / Contact</p><h2>Let's make<br><em>something felt.</em></h2><a class="contact-email" href="mailto:bhrzzt@gmail.com">bhrzzt@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-meta"><span>Tehran, Iran</span><a href="https://t.me/bhrzt" target="_blank" rel="noopener noreferrer">Start a conversation on Telegram ↗</a></div></section>
+</main>
+<footer><span>Photography · Film · Creative Direction</span><span>© 2026 · SENS Studio</span></footer>
+<dialog id="media-dialog" aria-labelledby="media-title"><button class="dialog-close" aria-label="Close photograph or film" autofocus>Close <span aria-hidden="true">×</span></button><div class="dialog-media"></div><div class="dialog-caption"><div><p id="media-kind"></p><h2 id="media-title"></h2></div><div class="dialog-navigation"><button id="previous-photo" aria-label="Previous photograph">←</button><button id="next-photo" aria-label="Next photograph">→</button></div></div></dialog>
+<noscript><p class="noscript">JavaScript is off. <a href="original/index.html">Open the original photography and film portfolio.</a></p></noscript>
+</body></html>

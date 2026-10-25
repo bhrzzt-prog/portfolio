@@ -40,7 +40,8 @@ for(const asset of cfg.slotAssignments) {
  pass(record?.file === asset.stagingFile, 'Slot matches recorded source: ' + asset.id);
  if (record?.file === asset.stagingFile) readVerified(asset.stagingFile, record);
 }
-pass(cfg.blender.photorealFidelityApproved === false && cfg.blender.liveWebGLTestPassed === false,'3D review remains explicitly pending');
+pass(cfg.blender.photorealFidelityApproved === false,'Photoreal visual acceptance remains explicitly pending');
+pass(typeof cfg.blender.liveWebGLTestPassed === 'boolean','Actual WebGL QA status is recorded separately from visual acceptance');
 pass(cfg.navigation.primary.join(',')==='Photography,Film,About,Contact','Single canonical navigation definition');
 const banned = ['cosmic_tree_of_visual_stories.png','R8_LOCKED_IMAGE_PROJECTED_3D_DEV_ONLY.glb'];
 pass(banned.every(x=>cfg.forbiddenProductionAssets.includes(x)), 'Forbidden concept assets are flagged');

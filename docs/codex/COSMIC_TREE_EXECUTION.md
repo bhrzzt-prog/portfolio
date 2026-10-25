@@ -1,6 +1,10 @@
 # CODEX — BEHROOZ TAJIK / COSMIC TREE OF LIFE — R9 EXECUTION
 
 STATUS: **CODEX IMPLEMENTATION STARTER ONLY — NO PRODUCTION RELEASE**.
+UPDATE: the latest owner continuation explicitly authorizes an isolated working
+staging implementation for review before final photoreal acceptance. That runtime
+now exists; see `IMPLEMENTATION_R9.md`. Final visual acceptance, merge and
+publication remain separate closed gates. Preserve the original root site.
 Use the existing repository and this draft PR branch. Do NOT merge, publish, overwrite the live Netlify site, change DNS or spend paid credits without owner approval.
 
 ## Ground-truth verified sources
@@ -26,7 +30,7 @@ Use the existing repository and this draft PR branch. Do NOT merge, publish, ove
 1. Inspect root index.html and assets, preserve working pages/links/film entries; take baseline actual 1440/390 screenshots. DO NOT overwrite main or replace site with toy scaffold.
 2. Run node scripts/verify-cosmic-tree-inputs.mjs. It verifies all six recorded photo hashes and the original CV binary. Before visual reconstruction, set LOCKED_REFERENCE_PATH to the owner original and run node scripts/verify-cosmic-tree-inputs.mjs --require-reference. A source-only pass without that flag does not establish reference access. No invented asset paths or video URLs.
 3. **Fidelity gate**: source Blender revision 7 is NOT done. Obtain photoreal editable output consistent with visual lock; show side-by-side true Blender rendered frames vs reference (open, middle, settle, loop seam) for owner review. Improve tree form, fine twig and foliage count, bark roughness, golden veins, nebula, planetary rings, volumetric light and ground until owner approves. Do not substitute the synthetic image-projection GLB.
-4. When real Blender source/GLB is actually approved, integrate GLTF model into a dedicated Three.js hero canvas with 6 distinct real-photo texture slots. Keep the rest of the site in existing clean editorial structure, preserve functional Portfolio/Film routes, About and Contact.
+4. Integrate the real Blender GLB into the isolated staging Three.js hero canvas with 6 distinct real-photo texture slots, as authorized by the owner's later continuation. Keep visual fidelity explicitly pending until reviewed. Preserve existing Portfolio/Film content, About and Contact, and do not replace the production root page.
 5. Optional independent HyperFrames motion study: if using HyperFrames, execute npx hyperframes lint / validate / inspect / render, attach logs and actual MP4. This is for creative timing review only, NOT 3D-engine proof.
 6. Test on a **real GPU browser**, create screenshots 1440, 390, 320 and a playable screen recording of actual WebGL motion; verify console, image loads, navigation, CV, accessible keyboard, no-WebGL and reduced-motion fallbacks, motion seam and performance.
 7. Attach evidence to THIS draft PR; leave it DRAFT and unmerged for owner's visual approval. Never deploy Netlify before owner explicitly requests it.
