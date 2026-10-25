@@ -1,0 +1,322 @@
+[
+  {
+    "loadedImages": true,
+    "metrics": {
+      "camera": [
+        0.07460333340625873,
+        8.436829079627271,
+        37.09041511444797
+      ],
+      "drawCalls": 57,
+      "fps": 31,
+      "frames": 404,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": false,
+      "reduced": false,
+      "sourceRevision": 11,
+      "state": "ready",
+      "triangles": 386444
+    },
+    "overflow": false,
+    "viewport": [
+      1440,
+      900
+    ]
+  },
+  {
+    "headerWidth": 1904.800048828125,
+    "overflow": false,
+    "slotCount": 6,
+    "viewport": [
+      1920,
+      1080
+    ]
+  },
+  {
+    "headerWidth": 752.7999877929688,
+    "overflow": false,
+    "slotCount": 6,
+    "viewport": [
+      768,
+      1024
+    ]
+  },
+  {
+    "menuExpanded": "true",
+    "navigation": [
+      {
+        "text": "Photography",
+        "visible": true
+      },
+      {
+        "text": "Film",
+        "visible": true
+      },
+      {
+        "text": "About",
+        "visible": true
+      },
+      {
+        "text": "Contact",
+        "visible": true
+      }
+    ],
+    "overflow": false,
+    "profiles": [
+      "https://www.instagram.com/behroooztajik/",
+      "https://www.instagram.com/sensstudio__/",
+      "https://t.me/bhrzt",
+      "https://www.linkedin.com/in/behrooz-tajik-987ab395",
+      "http://127.0.0.1:4173/media/Behrooz_Tajik_CV_CURRENT.pdf"
+    ],
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "anchors": [
+      {
+        "id": "photo-far-left",
+        "inBounds": true,
+        "minTarget": 41.625
+      },
+      {
+        "id": "photo-landscape-large",
+        "inBounds": true,
+        "minTarget": 80.8375015258789
+      },
+      {
+        "id": "photo-portrait-center",
+        "inBounds": true,
+        "minTarget": 55.98749923706055
+      },
+      {
+        "id": "photo-landscape-small",
+        "inBounds": true,
+        "minTarget": 38.07500076293945
+      },
+      {
+        "id": "photo-fold-right",
+        "inBounds": true,
+        "minTarget": 49.28750228881836
+      },
+      {
+        "id": "photo-portrait-right",
+        "inBounds": true,
+        "minTarget": 51.650001525878906
+      }
+    ],
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "metrics": {
+      "camera": [
+        0,
+        8.535,
+        37
+      ],
+      "drawCalls": 57,
+      "fps": null,
+      "frames": 0,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": false,
+      "reduced": true,
+      "sourceRevision": 11,
+      "state": "ready",
+      "triangles": 386444
+    },
+    "mode": "forced reduced-motion QA path",
+    "overflow": false,
+    "transition": "0s"
+  },
+  {
+    "canvasCount": 0,
+    "dialogOpen": true,
+    "imageLoaded": true,
+    "mode": "forced no-WebGL QA path",
+    "overflow": false
+  },
+  {
+    "motionCapture": "actual WebGL canvas, VP8, 8-second request",
+    "metrics": {
+      "camera": [
+        -0.26794562542629824,
+        8.56381791362177,
+        36.68423625247947
+      ],
+      "drawCalls": 57,
+      "fps": 25,
+      "frames": 5640,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": true,
+      "reduced": false,
+      "sourceRevision": 12,
+      "state": "ready",
+      "triangles": 386444
+    }
+  },
+  {
+    "metrics": {
+      "camera": [
+        0.3711232687185012,
+        8.417737612244203,
+        37.34922818881478
+      ],
+      "drawCalls": 57,
+      "fps": 33,
+      "frames": 248,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": false,
+      "reduced": false,
+      "reflection": true,
+      "sourceRevision": 12,
+      "state": "ready",
+      "triangles": 386444
+    },
+    "overflow": false,
+    "viewport": [
+      1440,
+      900
+    ]
+  },
+  {
+    "metrics": {
+      "camera": [
+        4.3711232687185015,
+        8.917737612244203,
+        34.34922818881478
+      ],
+      "drawCalls": 37,
+      "fps": 33,
+      "frames": 248,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": false,
+      "reduced": false,
+      "reflection": false,
+      "sourceRevision": 12,
+      "state": "ready",
+      "triangles": 191550
+    },
+    "overflow": false,
+    "viewport": [
+      390,
+      844
+    ]
+  },
+  {
+    "metrics": {
+      "camera": [
+        4.3711232687185015,
+        8.917737612244203,
+        34.34922818881478
+      ],
+      "drawCalls": 37,
+      "fps": 33,
+      "frames": 248,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": false,
+      "reduced": false,
+      "reflection": false,
+      "sourceRevision": 12,
+      "state": "ready",
+      "triangles": 191550
+    },
+    "overflow": false,
+    "viewport": [
+      320,
+      700
+    ]
+  },
+  {
+    "metrics": {
+      "camera": [
+        0.3711232687185012,
+        8.417737612244203,
+        37.34922818881478
+      ],
+      "drawCalls": 57,
+      "fps": 33,
+      "frames": 248,
+      "gpu": "ANGLE (Intel, Intel(R) UHD Graphics 620 (0x00005917) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "independentSlots": [
+        "photo-far-left",
+        "photo-landscape-large",
+        "photo-portrait-center",
+        "photo-landscape-small",
+        "photo-fold-right",
+        "photo-portrait-right"
+      ],
+      "modelMeshCount": 7,
+      "moving": false,
+      "reduced": false,
+      "reflection": true,
+      "sourceRevision": 12,
+      "state": "ready",
+      "triangles": 386444
+    },
+    "overflow": false,
+    "viewport": [
+      1440,
+      900
+    ]
+  }
+]

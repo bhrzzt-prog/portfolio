@@ -1,0 +1,10 @@
+{
+  "name": "behrooz-cosmic-tree-r9",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:cosmic": "node scripts/build-cosmic-staging.mjs",
+    "preview:cosmic": "node scripts/serve-cosmic-staging.mjs"
+  },
+  "dependencies": {"three": "0.180.0"}
+}

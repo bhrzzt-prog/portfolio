@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "release": "BLOCKED_REQUIRES_OWNER_APPROVAL",
+  "lockedReference": {
+    "filename": "cosmic_tree_of_visual_stories.png",
+    "size": [
+      1672,
+      941
+    ],
+    "sha256": "a1397aa9fb03a0ac06d48291d0fad08bb7983560eaec2cba5b6ce95f6e56c2d2",
+    "containsSyntheticPortfolioArt": true,
+    "publish": false
+  },
+  "blender": {
+    "url": "https://higgsfield.ai/3d-jutsu/42d9d5d3-1eba-4b84-a4db-beb9b030a66a",
+    "lastVisuallyReviewedRevision": 7,
+    "photorealFidelityApproved": false,
+    "liveWebGLTestPassed": true,
+    "lastImplementationRevision": 12
+  },
+  "forbiddenProductionAssets": [
+    "cosmic_tree_of_visual_stories.png",
+    "LOCKED_REFERENCE_UNMODIFIED.png",
+    "R8_LOCKED_IMAGE_PROJECTED_3D_DEV_ONLY.glb",
+    "R8_IMAGE_PROJECTION_CAMERA_MOTION_REVIEW.mp4",
+    "golden_tree_among_cosmic_frames.png",
+    "luminous_tree_among_cosmic_gallery_worlds.png",
+    "R7_COSMIC_TREE_MOTION_PREVIS_2_5D.mp4"
+  ],
+  "slotAssignments": [
+    {
+      "id": "photo-far-left",
+      "rectPx": [
+        255,
+        283,
+        363,
+        447
+      ],
+      "stagingFile": "fashion_menswear_reflection.jpg",
+      "curated": false
+    },
+    {
+      "id": "photo-landscape-large",
+      "rectPx": [
+        406,
+        142,
+        667,
+        505
+      ],
+      "stagingFile": "fashion_black_editorial.jpg",
+      "curated": false
+    },
+    {
+      "id": "photo-portrait-center",
+      "rectPx": [
+        704,
+        386,
+        858,
+        607
+      ],
+      "stagingFile": "fashion_portrait.jpg",
+      "curated": false
+    },
+    {
+      "id": "photo-landscape-small",
+      "rectPx": [
+        862,
+        515,
+        979,
+        640
+      ],
+      "stagingFile": "sport_boxing.jpg",
+      "curated": false
+    },
+    {
+      "id": "photo-fold-right",
+      "rectPx": [
+        1285,
+        300,
+        1426,
+        559
+      ],
+      "stagingFile": "food_purple_drink.jpg",
+      "curated": false
+    },
+    {
+      "id": "photo-portrait-right",
+      "rectPx": [
+        1421,
+        407,
+        1540,
+        650
+      ],
+      "stagingFile": "portrait_menswear.jpg",
+      "curated": false
+    }
+  ],
+  "navigation": {
+    "wordmark": "BEHROOZ TAJIK",
+    "primary": [
+      "Photography",
+      "Film",
+      "About",
+      "Contact"
+    ],
+    "social": {
+      "instagramPersonal": "https://www.instagram.com/behroooztajik/",
+      "instagramSens": "https://www.instagram.com/sensstudio__/",
+      "telegram": "https://t.me/bhrzt",
+      "linkedin": "https://www.linkedin.com/in/behrooz-tajik-987ab395"
+    },
+    "cvFilename": "Behrooz_Tajik_CV_CURRENT.pdf",
+    "cvExistingInRepo": true
+  },
+  "releaseGates": {
+    "allRealPhotos": true,
+    "exactlySixIndependentlyAddressableSlots": true,
+    "realTreeMesh": true,
+    "motionVideoFromActual3D": true,
+    "webGLGPUQA": true,
+    "reducedMotion": true,
+    "noWebGLFallback": true,
+    "ownerVisualApproval": true,
+    "published": false
+  }
+}

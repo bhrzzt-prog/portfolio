@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "repository": "bhrzzt-prog/portfolio",
+  "sourceCommit": "f38f61d485357398f61d2e3bb3fd0436b5c686bf",
+  "photos": [
+    {
+      "id": "photo-far-left",
+      "file": "fashion_menswear_reflection.jpg",
+      "sha256": "0eda44a36626001945e96437fca759b7b61d9b56d1efff7677a570329d2e6bbe",
+      "bytes": 261410,
+      "width": 1229,
+      "height": 1536,
+      "source": "original repository",
+      "curated": false
+    },
+    {
+      "id": "photo-landscape-large",
+      "file": "fashion_black_editorial.jpg",
+      "sha256": "4ba2f22093664160c3afb4b507c41ce1c356eb731bf4d7d8093684c7e9ff66fd",
+      "bytes": 226528,
+      "width": 1152,
+      "height": 1536,
+      "source": "original repository",
+      "curated": false
+    },
+    {
+      "id": "photo-portrait-center",
+      "file": "fashion_portrait.jpg",
+      "sha256": "f510f043604e12ab7bab16a788ddc03753e39197bd065a106d91c196164b9c82",
+      "bytes": 212269,
+      "width": 1152,
+      "height": 1536,
+      "source": "original repository",
+      "curated": false
+    },
+    {
+      "id": "photo-landscape-small",
+      "file": "sport_boxing.jpg",
+      "sha256": "075d095a3b8699b9d99241b73149080cf507f9d50f0451f744d6f0097a3ad6e3",
+      "bytes": 248507,
+      "width": 1440,
+      "height": 1800,
+      "source": "original repository",
+      "curated": false
+    },
+    {
+      "id": "photo-fold-right",
+      "file": "food_purple_drink.jpg",
+      "sha256": "1270074f2bdd7d8f06684955ee8f205a3e5a56074ee092df27e66c2b200f7f04",
+      "bytes": 324165,
+      "width": 1320,
+      "height": 1762,
+      "source": "original repository",
+      "curated": false
+    },
+    {
+      "id": "photo-portrait-right",
+      "file": "portrait_menswear.jpg",
+      "sha256": "9aabd21cd6eb3592bf5a07e8d4bc871dfb04bd606ed22788149ac81a500b0eab",
+      "bytes": 196172,
+      "width": 1024,
+      "height": 1536,
+      "source": "original repository",
+      "curated": false
+    }
+  ],
+  "cv": {
+    "file": "Behrooz_Tajik_CV_CURRENT.pdf",
+    "sha256": "d2ef4e4e93224a2a3766859299b8c9528b630816470e1ec40d61f5761d58609a",
+    "bytes": 80034,
+    "pages": 1,
+    "source": "existing owner Downloads PDF; content inspected for Behrooz Tajik and CV 2026"
+  }
+}

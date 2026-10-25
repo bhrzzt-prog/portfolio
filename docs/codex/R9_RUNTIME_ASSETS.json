@@ -1,0 +1,21 @@
+{
+  "projectId": "42d9d5d3-1eba-4b84-a4db-beb9b030a66a",
+  "revision": 12,
+  "sourceBlend": {
+    "file": "artifacts/source_blender/COSMIC_TREE_R9.blend",
+    "bytes": 16628731,
+    "sha256": "9bb6c6c70681f3b2ac5f01b0cac31c3475f832ae32b151a82388442210975782"
+  },
+  "compressedBlend": {
+    "file": "assets/blender-source/COSMIC_TREE_R9.blend.gz",
+    "bytes": 5372662,
+    "sha256": "9ca15c59749ad3a7e086068a9848e4af53ab9db0fd71970d7a2a3a6dc553991e"
+  },
+  "model": {
+    "file": "assets/runtime/COSMIC_TREE_R9.glb",
+    "bytes": 5768780,
+    "sha256": "8d897c6a9438e8e9db569062464d5dfa8776494261a339b5666dd9e43e4fb0e0"
+  },
+  "referenceImageEmbedded": false,
+  "ownerApproved": false
+}
