@@ -29,3 +29,13 @@ Read docs/codex/COSMIC_TREE_EXECUTION.md, run node scripts/verify-cosmic-tree-in
 
 ## NON-NEGOTIABLE RELEASE GATE
 Do not merge, publish, change Netlify, pay for credits or replace original art without owner consent. A successful source-contract check is not proof of photoreal fidelity.
+
+## 25 October 2026 — ACTUAL original Blender source transferred, VERIFIED
+
+- Connected original Higgsfield project **42d9d5d3-1eba-4b84-a4db-beb9b030a66a**, revision **7**, found the real working file `/work/session.blend`, byte length **7,523,898**, valid `BLENDER17-01` header.
+- **Original .blend SHA-256: `27f8ccae3d41b333643af91515ec747a047817ed6ff0deb9612d5a968563a85a`**. This is the genuine editable scene, *not* the unacceptable fake-media R8 projection GLB or new AI image.
+- Because external signed-download DNS failed and tool output cap was 262,144 bytes, the source was gzip-compressed losslessly to **1,619,315 bytes** with deterministic gzip mtime=0, split into 14 verified chunks, then concatenated and committed as **`assets/blender-source/COSMIC_TREE_R7.blend.gz.base64`** to THIS SAME PR branch. Gzip SHA-256 **`ae791e871377351d4684ecd0f0691ea240dc376e679b1200171707ed6c61d217`**.
+- **End-to-end verification PASSED:** the GitHub `fetch_blob` content (blob `129ba732a17f1badc20d1968c504fc1e3830a62d`, 2,159,089 text characters) was byte-exact equal to the ordered 14 compressed-base64 chunks read from the running Blender source. No model modifications were made.
+- **Codex restore, from repository root:** `python scripts/restore-cosmic-tree-blend.py`. This decodes, decompresses, verifies original size, header and SHA-256, and writes `artifacts/source_blender/COSMIC_TREE_R7_ORIGINAL.blend`. Do not bypass verification or pretend source fidelity equals photoreal visual acceptance.
+- Current **locked reference PNG is still not a repository asset**. It was verified separately as `TREE_OF_LIFE_LOCKED_REFERENCE.png` in the ChatGPT conversation and ZIP with SHA-256 `a1397aa9fb03a0ac06d48291d0fad08bb7983560eaec2cba5b6ce95f6e56c2d2`. It is **NOT yet accessible in the Codex execution workspace by this transfer**, and remains a reference-only prohibited production image until owner-approved real media swaps.
+- CV and original photo SHA verification committed by Codex in an earlier R9 branch pass remain preserved. PR remains DRAFT, unmerged, Netlify untouched.
