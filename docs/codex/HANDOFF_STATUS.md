@@ -29,3 +29,23 @@ Read docs/codex/COSMIC_TREE_EXECUTION.md, run node scripts/verify-cosmic-tree-in
 
 ## NON-NEGOTIABLE RELEASE GATE
 Do not merge, publish, change Netlify, pay for credits or replace original art without owner consent. A successful source-contract check is not proof of photoreal fidelity.
+
+## 25 October 2026 — ACTUAL original Blender source transferred, VERIFIED
+
+- Connected original Higgsfield project **42d9d5d3-1eba-4b84-a4db-beb9b030a66a**, revision **7**, found the real working file `/work/session.blend`, byte length **7,523,898**, valid `BLENDER17-01` header.
+- **Original .blend SHA-256: `27f8ccae3d41b333643af91515ec747a047817ed6ff0deb9612d5a968563a85a`**. This is the genuine editable scene, *not* the unacceptable fake-media R8 projection GLB or new AI image.
+- Because external signed-download DNS failed and tool output cap was 262,144 bytes, the source was gzip-compressed losslessly to **1,619,315 bytes** with deterministic gzip mtime=0, split into 14 verified chunks, then concatenated and committed as **`assets/blender-source/COSMIC_TREE_R7.blend.gz.base64`** to THIS SAME PR branch. Gzip SHA-256 **`ae791e871377351d4684ecd0f0691ea240dc376e679b1200171707ed6c61d217`**.
+- **End-to-end verification PASSED:** the GitHub `fetch_blob` content (blob `129ba732a17f1badc20d1968c504fc1e3830a62d`, 2,159,089 text characters) was byte-exact equal to the ordered 14 compressed-base64 chunks read from the running Blender source. No model modifications were made.
+- **Codex restore, from repository root:** `python scripts/restore-cosmic-tree-blend.py`. This decodes, decompresses, verifies original size, header and SHA-256, and writes `artifacts/source_blender/COSMIC_TREE_R7_ORIGINAL.blend`. Do not bypass verification or pretend source fidelity equals photoreal visual acceptance.
+- Current **locked reference PNG is still not a repository asset**. It was verified separately as `TREE_OF_LIFE_LOCKED_REFERENCE.png` in the ChatGPT conversation and ZIP with SHA-256 `a1397aa9fb03a0ac06d48291d0fad08bb7983560eaec2cba5b6ce95f6e56c2d2`. It is **NOT yet accessible in the Codex execution workspace by this transfer**, and remains a reference-only prohibited production image until owner-approved real media swaps.
+- CV and original photo SHA verification committed by Codex in an earlier R9 branch pass remain preserved. PR remains DRAFT, unmerged, Netlify untouched.
+
+
+## 2026-10-25 — Exact LOCKED reference transferred and GitHub blob verified
+
+- **Artifact physically saved in same R9 branch**: \`assets/reference/TREE_OF_LIFE_LOCKED_REFERENCE.png.base64\`, line-unbroken original PNG encoded as 3,394,600 base64 characters, plus newline. **This is not a replacement image** and is not the R8 photographic projection proxy.
+- Reconstructed the data losslessly from the original persistent SENS Library file \`BEHROOZ_TAJIK_R7_LOCKED_REFERENCE.png\` (2,545,950 bytes). Local SHA-256 verified \`a1397aa9fb03a0ac06d48291d0fad08bb7983560eaec2cba5b6ce95f6e56c2d2\`.
+- GitHub committed source file blob SHA is **\`990962d29e6042bce56be4363149963fd505ccd0\`**, independently equal to the Git blob SHA recomputed from original immutable PNG data encoded in the identical way. This proves the encoded source file in GitHub is byte-exact, despite GitHub REST contents returning empty text for files larger than 1 MB.
+- **Codex**: run \`python scripts/restore-locked-reference.py\` on the SAME branch. It decodes to \`artifacts/reference-only/TREE_OF_LIFE_LOCKED_REFERENCE.png\` and rejects mismatched length, invalid PNG header and SHA. Run existing \`python scripts/restore-cosmic-tree-blend.py\` to recover authentic source Blender rev7, and use both for **visual comparison ONLY**.
+- The concept image contains synthetic photographs. **NEVER** include the locked reference PNG (or its compressed/encoded source) as a runtime site texture, CSS background, fallback, public asset, video thumbnail or open graph image. Exactly six original owner photos must be bound to distinct live 3D slots after staging build and owner approval.
+- PR #2 remains DRAFT/unmerged. This completes recovery of **source dependencies**, not photoreal 3D rework, Figma stage, motion QA, real GPU site implementation or production consent.
