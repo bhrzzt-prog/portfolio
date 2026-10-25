@@ -10,11 +10,22 @@
 - Figma https://www.figma.com/design/vpucXrPbmWyVKTP7lPH6jS — real connector attempted, blocked by Starter quota. No updated editable Figma design claimed.
 - HyperFrames — documented HTML/GSAP timeline producer; prior render was OpenCV+FFmpeg, **not** HyperFrames; install/test separately if needed, not 3D runtime.
 - Staging artworks: six physical original GitHub photo files validated with connected Github. Manifest maps a suggested distribution; selection is NOT owner-approved for final.
-- Verified 2026 CV exists in original user Library files but is **not yet in repo**. Codex must add the actual source PDF before live CV link can be called working.
+- Verified 2026 CV is now included at repository root, copied unchanged from the existing owner Downloads PDF (80,034 bytes; one page; SHA256 d2ef4e4e93224a2a3766859299b8c9528b630816470e1ec40d61f5761d58609a). PDF text was inspected for the owner's identity, 2026 CV heading and current SENS experience. The existing site has not been edited to link it yet.
 - Original site film URLs may live elsewhere; do not assume 45 current playable films in this static repo without checking each actual media source. Do not invent links.
 
 ## CODEX: NEXT ACTIONS
 Read docs/codex/COSMIC_TREE_EXECUTION.md, run node scripts/verify-cosmic-tree-inputs.mjs, then build on THIS DRAFT PR branch, attach Blender render comparisons, actual WebGL motion capture, 1440/390/320 screenshot QA, media provenance and CV/social link test receipts. Remain draft and unmerged until owner approves BOTH visual appearance and motion.
+
+## 25 October 2026 — Local Codex execution audit
+
+- Checked out the existing R9 branch at f38f61d485357398f61d2e3bb3fd0436b5c686bf. PR #2 was confirmed open, draft and unmerged.
+- Added the original CV binary and six photo integrity records with SHA256, byte sizes and decoded image dimensions. The verifier now checks file contents, not only filenames. Slot selection remains provisional.
+- The referenced ChatGPT conversation exposes only message-reference placeholders; its uploaded files are not attached here. Searched the owner's local Documents, Downloads and Desktop by relevant asset names. The locked PNG, source ZIP and Blender files were not found in that search.
+- Read the original SENS Notion record (3f38c5bc-a787-812b-8957-e70ea20ba981): it records Library IDs for the locked PNG/R9 ZIP, but provides no retrievable file bytes or working download URL. Library IDs alone are not usable as image evidence.
+- Higgsfield get_project, /3d-jutsu instructions and list_projects returned internal error -32603. Opening the known source project in the in-app browser failed ERR_CONNECTION_RESET. No scene revision was edited or verified.
+- Figma session creation succeeded; the first file inspection returned the Starter MCP tool limit. No Figma design was read or edited.
+- Sites returned no owned Sites. Existing GitHub source is retained; no new Site, deployment, model generation, video or paid job was created.
+- To resume the fidelity gate, provide the original R9 ZIP or locked PNG, plus an exported editable .blend/clean GLB if the Higgsfield connection remains unavailable. The locked reference hash must pass before claiming a reference comparison. Actual Blender render comparison and live WebGL work remain incomplete.
 
 ## NON-NEGOTIABLE RELEASE GATE
 Do not merge, publish, change Netlify, pay for credits or replace original art without owner consent. A successful source-contract check is not proof of photoreal fidelity.
