@@ -109,7 +109,7 @@
       "linkedin": "https://www.linkedin.com/in/behrooz-tajik-987ab395"
     },
     "cvFilename": "Behrooz_Tajik_CV_CURRENT.pdf",
-    "cvExistingInRepo": false
+    "cvExistingInRepo": true
   },
   "releaseGates": {
     "allRealPhotos": true,
